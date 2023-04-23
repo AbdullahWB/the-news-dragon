@@ -6,7 +6,7 @@ import app from '../Firebase/Firebase.config';
 export const AuthContext = createContext(null)
 const auth = getAuth(app)
 const AuthProvider = ({children}) => {
-    const user = {displayName: 'user',}
+    const user = null
     const authInfo = {
         user,
     }

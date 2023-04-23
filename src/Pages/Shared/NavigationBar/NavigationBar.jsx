@@ -18,7 +18,7 @@ const NavigationBar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <Nav.Link href="#features">
-                                <Link to='/'>
+                                <Link to='/category/0'>
                                     Home
                                 </Link>
                             </Nav.Link>
@@ -27,8 +27,9 @@ const NavigationBar = () => {
                         </Nav>
                         <Nav>
                             {user &&<FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>}
-                            {user ? <Button variant="light">login</Button> : <Link to='/login'>
-                                <Button variant="light">login</Button></Link>}
+                            {user ? <Link to='/register'>
+                                <Button variant="light">Register</Button></Link> : <Link to='/login'>
+                                <Button variant="light">Login</Button></Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
