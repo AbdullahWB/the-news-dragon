@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 // import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -26,7 +26,7 @@ const NavigationBar = () => {
                             <Nav.Link href="#pricing">Pricing</Nav.Link>
                         </Nav>
                         <Nav>
-                            {user && <Nav.Link href="#deets"><FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle></Nav.Link>}
+                            {user &&<FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>}
                             {user ? <Button variant="light">login</Button> : <Link to='/login'>
                                 <Button variant="light">login</Button></Link>}
                         </Nav>

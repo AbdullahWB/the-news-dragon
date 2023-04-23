@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <Main></Main>,
         children: [
             {
-                path: '/:id',
+                path: ':id',
                 element: <Category></Category>,
                 loader: ({ params }) => fetch(`http://localhost:3000/categories/${params.id}`)
             },
