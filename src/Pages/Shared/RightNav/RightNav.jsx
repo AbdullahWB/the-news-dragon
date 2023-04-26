@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import QZone from '../QZone/QZone';
 import bgpic from '../../../assets/bg.png'
+import { Link } from 'react-router-dom';
 
 
 const RightNav = () => {
@@ -21,8 +22,17 @@ const RightNav = () => {
                 </ListGroup>
             </div>
             <QZone></QZone>
-            <div>
-                <img src={bgpic} alt="" />
+            <div className='position-relative'>
+                <img className='w-100' src={bgpic} alt="" />
+                <div className='position-absolute top-0 p-5 text-center'>
+                    <h1 className='text-white text-bold mb-4'>Create an Amazing Newspaper</h1>
+                    <p className='text-white mb-4'>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+                    <Link to="">
+                        <Button className='p-3 fs-5' variant="danger">
+                            Learn More
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </div>
     );
