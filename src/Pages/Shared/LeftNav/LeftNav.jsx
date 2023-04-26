@@ -1,11 +1,12 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import './LeftNav.css'
 
 const LeftNav = () => {
     const [categories, setCategories] = useState([])
-    
+
     useEffect(() => {
         fetch('http://localhost:3000/categories')
             .then(res => res.json())
@@ -15,12 +16,19 @@ const LeftNav = () => {
 
     return (
         <div>
-            <h4>All category</h4>
+            <h4 className='mb-4'>All category</h4>
             {
                 categories.map(category => <p
-                key={category.id}
+                    className='p-3 my-p'
+                    key={category.id}
                 >
-                    <Link className='text-decoration-none text-black' to={`/category/${category.id}`}>{category.name}</Link>
+                    <NavLink
+                        to={`/category/${category.id}`}
+                        className={({isActive}) => isActive ? "active text-decoration-none text-danger text-bold" : "text-decoration-none text-black"}
+                    >
+                        {category.name}
+                    </NavLink>
+
                 </p>)
             }
         </div>
