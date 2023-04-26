@@ -5,8 +5,8 @@ import qzone3 from '../../../assets/qZone3.png'
 
 const QZone = () => {
     return (
-        <div>
-            <h2>Q-Zone</h2>
+        <div className='p-3 mt-4 mb-4 d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: '#F3F3F3'}}>
+            <h3>Q-Zone</h3>
             <img src={qzone1} alt="" />
             <img src={qzone2} alt="" />
             <img src={qzone3} alt="" />
