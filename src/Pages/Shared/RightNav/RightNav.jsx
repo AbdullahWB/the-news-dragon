@@ -11,14 +11,14 @@ const RightNav = () => {
     return (
         <div>
             <h4>Login with</h4>
-            <Button variant="outline-primary"><FaGoogle /> Login with google</Button>
-            <Button variant="outline-secondary"><FaGithub /> login with github</Button>
-            <div>
-                <h2>Find Us On</h2>
-                <ListGroup>
-                    <ListGroup.Item><FaFacebook /> Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item><FaTwitter /> Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item><FaInstagram /> Morbi leo risus</ListGroup.Item>
+            <Button className='w-100 mt-2' variant="outline-danger"><FaGoogle /> Login with google</Button>
+            <Button className='w-100 mt-2' variant="outline-secondary"><FaGithub /> login with github</Button>
+            <div className='mt-5'>
+                <h4>Find Us On</h4>
+                <ListGroup className=''>
+                    <ListGroup.Item className='p-3'><FaFacebook style={{ color: "#3B599C" , marginRight: "10px" }} /> Facebook</ListGroup.Item>
+                    <ListGroup.Item className='p-3'><FaTwitter  style={{ color: "#58A7DE" , marginRight: "10px" }} /> Twitter</ListGroup.Item>
+                    <ListGroup.Item className='p-3'><FaInstagram  style={{ color: "#D82D7E" , marginRight: "10px" }}  /> Instagram</ListGroup.Item>
                 </ListGroup>
             </div>
             <QZone></QZone>
