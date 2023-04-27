@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import './Register.css'
 
 const Register = () => {
+    const [show, setShow] = useState(false)
     return (
         <div className='bg-color d-flex justify-content-center align-items-center'>
               <Container className='mx-auto w-25'>
@@ -26,9 +29,16 @@ const Register = () => {
                     <Form.Control className='p-3' style={{background: '#F3F3F3'}} type="text" name='photo' required placeholder="Enter your Photo URL" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3 my-relative" controlId="formBasicPassword">
                     <Form.Label className='text-bold'>Password</Form.Label>
-                    <Form.Control className='p-3' style={{background: '#F3F3F3'}} type="password" name='password' required placeholder="Enter your password" />
+                    <Form.Control className='p-3' style={{ background: '#F3F3F3' }} type={show ? "text" : "password"} name='password' required placeholder="Enter your password" />
+                        <p className='toggle' onClick={()=>setShow(!show)}>
+                            <small>
+                                {
+                                    show ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
+                                }
+                        </small>
+                        </p>    
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" name='accept' label="Accept Term & Conditions" />
