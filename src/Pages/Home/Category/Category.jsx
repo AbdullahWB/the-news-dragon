@@ -7,7 +7,7 @@ const Category = () => {
     const categoryNews = useLoaderData()
     return (
         <div>
-            {id && <h3>this is a category: {categoryNews.length}</h3>}
+            {id && <h4 className='text-bold mb-3'>Dragon News Home: {categoryNews.length}</h4>}
             {
                 categoryNews.map(news => <NewsCart
                     key={news._id}
