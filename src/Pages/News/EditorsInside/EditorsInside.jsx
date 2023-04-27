@@ -19,7 +19,7 @@ const EditorsInside = () => {
                         <Card.Body className='px-0'>
                             <Card.Title>Fashion News</Card.Title>
                             <Card.Text>
-                            21 The Most Stylish Wedding Guest Dresses For Spring
+                                21 The Most Stylish Wedding Guest Dresses For Spring
                             </Card.Text>
                         </Card.Body>
                         <p><FaCalendarAlt></FaCalendarAlt> {moment().add(10, 'days').calendar()}</p>
@@ -31,7 +31,7 @@ const EditorsInside = () => {
                         <Card.Body className='px-0'>
                             <Card.Title>Fashion News</Card.Title>
                             <Card.Text>
-                            21 The Most Stylish Wedding Guest Dresses For Spring
+                                21 The Most Stylish Wedding Guest Dresses For Spring
                             </Card.Text>
                         </Card.Body>
                         <p><FaCalendarAlt></FaCalendarAlt> {moment().add(10, 'days').calendar()}</p>
@@ -43,7 +43,7 @@ const EditorsInside = () => {
                         <Card.Body className='px-0'>
                             <Card.Title>Fashion News</Card.Title>
                             <Card.Text>
-                            21 The Most Stylish Wedding Guest Dresses For Spring
+                                21 The Most Stylish Wedding Guest Dresses For Spring
                             </Card.Text>
                         </Card.Body>
                         <p><FaCalendarAlt></FaCalendarAlt> {moment().add(10, 'days').calendar()}</p>

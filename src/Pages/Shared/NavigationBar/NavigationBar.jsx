@@ -12,7 +12,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 const NavigationBar = () => {
     const { user } = useContext(AuthContext)
     return (
-        <Container style={{marginBottom: '80px'}}>
+        <Container style={{marginBottom: '80px', marginTop: '30px'}}>
             <Navbar collapseOnSelect expand="lg" variant="light">
                 <Container>
                     <Navbar.Collapse id="responsive-navbar-nav">

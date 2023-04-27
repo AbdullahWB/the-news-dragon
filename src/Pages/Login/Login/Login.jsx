@@ -2,41 +2,41 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import './Login.css'
 
 const Login = () => {
     return (
-        <Container className='mx-auto w-25'>
-            <h2>Please Login</h2>
-            <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' required placeholder="Enter email" />
+        <div className='bg-color d-flex justify-content-center align-items-center'>
+            <Container className='mx-auto w-25 '>
+            <Form className='p-5 w-100 h-100 bg-white border rounded'>
+                <h2 className='text-center text-bold mt-4 mb-5'>Login your account</h2>
+                <hr />
+                <Form.Group className="mb-3 mt-4" controlId="formBasicEmail">
+                    <Form.Label className='text-bold'>Email address</Form.Label>
+                    <Form.Control className='p-3' style={{background: '#F3F3F3'}} type="email" name='email' required placeholder="Enter your email address" />
                 </Form.Group>
-
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' required placeholder="Password" />
+                    <Form.Label className='text-bold'>Password</Form.Label>
+                    <Form.Control className='p-3' style={{background: '#F3F3F3'}} type="password" name='password' required placeholder="Enter your password" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button className='w-100 py-2 mb-3' variant="dark" type="submit">
                     Login
                 </Button>
                 <br />
-                <Form.Text className="">
-                Dont’t Have An Account ? <Link to="/register" className='text-danger'>Register</Link>  
+                <Form.Text className="text-center d-flex justify-content-center align-items-center">
+                    Dont’t Have An Account ? <Link to="/register" className='text-danger ms-2 text-decoration-none text-bold'>Register</Link>
                 </Form.Text>
                 <Form.Text className="text-success">
-                       
                 </Form.Text>
                 <Form.Text className="text-danger">
-                       
                 </Form.Text>
             </Form>
-
         </Container>
+        </div>
     );
 };
 
