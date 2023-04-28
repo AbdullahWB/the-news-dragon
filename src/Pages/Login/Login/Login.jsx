@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext } from 'react';
@@ -11,6 +11,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 const Login = () => {
     const [show, setShow] = useState(false)
     const { singIn } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleLogin = event => {
         event.preventDefault();
@@ -23,6 +24,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                navigate('/category/0')
             })
             .catch(error => {
                 console.log(error);
