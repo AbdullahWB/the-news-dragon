@@ -10,6 +10,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 const Register = () => {
     const [show, setShow] = useState(false)
     const { createUser } = useContext(AuthContext)
+    const [accepted, setAccepted] = useState(false)
 
 
     const handleRegister = (event) => {
@@ -30,6 +31,10 @@ const Register = () => {
             .catch(error => {
                 console.log(error);
             })
+    }
+
+    const handleAccepted = event => {
+        setAccepted(event.target.checked);
     }
 
     return (
@@ -65,9 +70,13 @@ const Register = () => {
                         </p>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" name='accept' label="Accept Term & Conditions" />
+                        <Form.Check
+                            onClick={handleAccepted}
+                            type="checkbox"
+                            name='accept'
+                            label={<>Accept <Link to="/terms">Term & Conditions</Link></>}/>
                     </Form.Group>
-                    <Button className='w-100 py-2 mb-3' variant="dark" type="submit">
+                    <Button className='w-100 py-2 mb-3' disabled={!accepted} variant="dark" type="submit">
                         Register
                     </Button>
                     <br />
